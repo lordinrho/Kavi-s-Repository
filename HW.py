@@ -1,2 +1,3 @@
 __author__ = 'lord'
-print("Hello World")
+print("Hello Ghana")
+print("JESUS IS GOD")
