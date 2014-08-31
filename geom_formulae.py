@@ -1,5 +1,7 @@
 __author__ = 'lord'
 import numpy
+
+
 def rectangle_area(width, length):
     """
     Calculating the area of a rectangle
@@ -15,41 +17,45 @@ if __name__ == "__main__":
     samplewidth = 4
     samplelength = 5
     print("The area of the Rectangle is",
-         rectangle_area(samplewidth,samplelength))
+         rectangle_area(samplewidth, samplelength))
 
-def Rhombus_area(diagonal1, diagonal2):
+
+def rhombus_area(diagonal1, diagonal2):
     """
     calculating the area of a rhombus using its two diagonal lengths
     :param diagonal1: length of first diagonal
     :param diagonal2: length of other diagonal
     :return: rhombus_area
-    >>>Rhombus_area(3,4)
+    >>>rhombus_area(3,4)
     12
     """
     return diagonal1*diagonal2
+
 if __name__ == "__main__":
     diagonal1 = 3
     diagonal2 = 4
     print("The Area of the Rhombus is",
-          Rhombus_area(diagonal1, diagonal2))
+          rhombus_area(diagonal1, diagonal2))
 
-def Trapezoid_area(base1, base2, height):
+
+def trapezoid_area(base1, base2, height):
     """
     Calculating the area of a Trapezoid
     :param base1: the length of the first base
     :param base2: the length of the other base
     :param height: the altitude
     :return: Trapezoid_area
-    >>>Trapezoid_area(5,3,4)
+    >>>trapezoid_area(5,3,4)
     16
     """
     return 0.5*height*(base1+base2)
+
 if __name__ == "__main__":
     base1 = 5
     base2 = 3
     height = 4
     print("The Area of the Trapezoid is",
-          Trapezoid_area(base1, base2, height))
+          trapezoid_area(base1, base2, height))
 
 
 def pyramid_volume(base_area, height):
@@ -63,6 +69,7 @@ def pyramid_volume(base_area, height):
     """
     volume = 1/3*base_area*height
     return volume
+
 if __name__ == "__main__":
     base_area = 9
     height = 5
@@ -97,13 +104,14 @@ def sphere_volume(radius):
     """
     volume = 4/3*numpy.pi*radius**3
     return volume
+
 if __name__ == "__main__":
     radius = 3
     print("The Volume of the Sphere is",
     sphere_volume(radius))
 
 
-def circle_area(radius = None, diameter = None):
+def circle_area(radius=None, diameter=None):
     """
     Calc
     :param radius: radius
@@ -117,10 +125,8 @@ def circle_area(radius = None, diameter = None):
     else:
         area2 = numpy.pi*radius**2
         return area2
-
 print("Area of circle using radius is", circle_area(radius = 4))
 print("Area of circle using diameter is", circle_area(diameter = 8))
-
 
 
 def cylinder_area(radius, height):
@@ -134,6 +140,8 @@ def cylinder_area(radius, height):
     """
     area = 2*numpy.pi*radius*height
     return area
+
+
 def cylinder_volume(radius, height):
     """
     Calculating the volume of a cylinder
@@ -143,8 +151,9 @@ def cylinder_volume(radius, height):
     >>>cylinder_volume(3,5)
     141.371669412
     """
-    volume = numpy.pi*(radius**2)*(height)
+    volume = numpy.pi*(radius**2)*height
     return volume
+
 if __name__ == "__main__":
     print("The area of the cylinder is",
           cylinder_area(3, 5), "\n"
@@ -163,6 +172,8 @@ def cone_volume(radius, height):
     """
     volume = (1/3)*numpy.pi*(radius**2)*height
     return volume
+
+
 def cone_area(radius, height):
     """
     Calculating the area of a cone
@@ -172,7 +183,7 @@ def cone_area(radius, height):
     >>>cone_area(3,5)
     54.955426909
     """
-    area = (numpy.pi)*radius*((radius**2+height**2)**(1/2))
+    area = numpy.pi*radius*((radius**2+height**2)**(1/2))
     return area
 
 if __name__ == "__main__":
