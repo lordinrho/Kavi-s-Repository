@@ -113,10 +113,14 @@ if __name__ == "__main__":
 
 def circle_area(radius=None, diameter=None):
     """
-    Calc
-    :param radius: radius
-    :param diameter: dia
-    :return: area
+    Calculating the area of circle using both its radius and diameter (in alternative formulae)
+    :param radius: radius of the circle
+    :param diameter: diameter of the circle
+    :return: area of circle
+    >>>circle_area(radius=4)
+    50.265482
+    >>>circle_area(diameter=8)
+    50.265482
     """
 
     if radius is None:
@@ -125,8 +129,8 @@ def circle_area(radius=None, diameter=None):
     else:
         area2 = numpy.pi*radius**2
         return area2
-print("Area of circle using radius is", circle_area(radius = 4))
-print("Area of circle using diameter is", circle_area(diameter = 8))
+print("Area of circle using radius is", circle_area(radius=4))
+print("Area of circle using diameter is", circle_area(diameter=8))
 
 
 def cylinder_area(radius, height):
@@ -183,7 +187,7 @@ def cone_area(radius, height):
     >>>cone_area(3,5)
     54.955426909
     """
-    area = numpy.pi*radius*((radius**2+height**2)**(1/2))
+    area = numpy.pi*radius*((radius**2 + height**2)**(1/2))
     return area
 
 if __name__ == "__main__":
@@ -191,3 +195,38 @@ if __name__ == "__main__":
           cone_volume(3, 5), "\n"
           "The area of the cone is",
           cone_area(3, 5))
+
+def volume_rectangular_prism(side1, side2, side3):
+    """
+    Calculates the volume of a rectangular prism
+    :param side1: length of first side
+    :param side2: length of second side
+    :param side3: length of third side
+    :return: Volume
+    >>>volume_rectangular_prism(2,3,4)
+    24
+    """
+    volume = side1*side2*side3
+    return volume
+
+if __name__ == "__main__":
+    print("The volume of the Rectangular prism is",
+          volume_rectangular_prism(2, 3, 4))
+
+
+def volume_ellipsoid(radius1, radius2, radius3):
+    """
+     Calculating the Volume of an Ellipsoid
+    :param radius1: length of its first semi-principal axis
+    :param radius2: length of its second semi-principal axis
+    :param radius3: length of its third semi-principal axis
+    :return: volume
+    >>>volume_ellipsoid(2,3,4)
+    100.530964915
+    """
+    Ellipsoid = (4/3)*numpy.pi*radius1*radius2*radius3
+    return Ellipsoid
+
+if __name__ == "__main__":
+    print("The volume of the Ellipsoid is",
+          volume_ellipsoid(2, 3, 4))
