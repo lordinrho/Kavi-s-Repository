@@ -224,8 +224,8 @@ def volume_ellipsoid(radius1, radius2, radius3):
     >>>volume_ellipsoid(2,3,4)
     100.530964915
     """
-    Ellipsoid = (4/3)*numpy.pi*radius1*radius2*radius3
-    return Ellipsoid
+    volume = (4/3)*numpy.pi*radius1*radius2*radius3
+    return volume
 
 if __name__ == "__main__":
     print("The volume of the Ellipsoid is",
